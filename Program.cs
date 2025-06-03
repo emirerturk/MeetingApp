@@ -1,9 +1,14 @@
+using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
+
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
 
 builder.Services.AddControllersWithViews();
-app.MapGet("/", () => "Hello World!");
-app.MapGet("/abc", () => "Test!");
 
+var app = builder.Build();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
 
 app.Run();
