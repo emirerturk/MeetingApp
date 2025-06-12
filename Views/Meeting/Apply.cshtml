@@ -1,5 +1,28 @@
+@{
+    ViewBag.Title = "Katılım Formu";
+}
 <h1 class="h4">Toplantı katılım formu</h1>
-<form action="">
-
-    <button class="btn btn-primary" type="submit">Başvuru Yap</button>
+<form method="post" asp-controller="Meeting" asp-action="Apply">
+    <div class="mb-3 text-start">
+        <label for="name" class="form-label">Adınız</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3 text-start">
+        <label for="email" class="form-label">E-posta Adresiniz</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3 text-start">
+        <label for="phone" class="form-label">Telefon Numaranız</label>
+        <input type="tel" class="form-control" id="phone" name="phone" required>
+    </div>
+    <div class="mb-3 text-start">
+        <label for="willAttend" class="form-label">Katılım Durumu</label>
+        <select name="willAttend" id="willAttend" class="form-select">
+            <option value="true">Katılıyorum</option>
+            <option value="false">Katılmıyorum</option>
+        </select>
+    </div>
+    <div class="d-flex justify-content-start">
+        <button class="btn btn-primary" type="submit">Başvuru Yap</button>
+    </div>
 </form>
