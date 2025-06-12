@@ -1,3 +1,60 @@
-/obj
-/obj
-/obj/Debug/net9.0
+# .NET Core & .NET 5/6/7
+bin/
+obj/
+out/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Build results
+[Bb]uild/
+[Ll]ogs/
+*.log
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# NuGet
+*.nupkg
+# NuGet Packages folder - if using packages.config
+packages/
+
+# dotCover
+.idea/.dotCover
+
+# Other files
+*.vspscc
+*.vssscc
+.vs/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Entity Framework Migrations (optional if using secrets)
+App_Data/
+
+# Secrets and config files
+secrets.json
+*.db
+*.sqlite
+
+# JetBrains Rider
+.idea/
+.idea/*
+
+# Windows image file caches
+ehthumbs.db
+Icon?
