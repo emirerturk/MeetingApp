@@ -1,2 +1,2 @@
 # MeetingApp
-.net meeting app demo
+A basic web application to add and list meetings.
