@@ -1,23 +1,26 @@
+@model UserInfo
 @{
     ViewBag.Title = "Katılım Formu";
 }
 <h1 class="h4">Toplantı katılım formu</h1>
-<form method="post" asp-controller="Meeting" asp-action="Apply">
+<form method="post" asp-controller="Meeting" asp-action="Apply" novalidate>
+    <div asp-validation-summary="All"></div>
     <div class="mb-3 text-start">
-        <label for="name" class="form-label">Adınız</label>
-        <input type="text" class="form-control" id="name" name="name" required>
+        <label asp-for="Name" class="form-label">Adınız</label>
+        <input asp-for="Name" class="form-control">
     </div>
     <div class="mb-3 text-start">
-        <label for="email" class="form-label">E-posta Adresiniz</label>
-        <input type="email" class="form-control" id="email" name="email" required>
+        <label asp-for="Email" class="form-label">E-posta Adresiniz</label>
+        <input asp-for="Email" class="form-control">
     </div>
     <div class="mb-3 text-start">
-        <label for="phone" class="form-label">Telefon Numaranız</label>
-        <input type="tel" class="form-control" id="phone" name="phone" required>
+        <label asp-for="Phone" class="form-label">Telefon Numaranız</label>
+        <input asp-for="Phone" class="form-control">
     </div>
     <div class="mb-3 text-start">
-        <label for="willAttend" class="form-label">Katılım Durumu</label>
-        <select name="willAttend" id="willAttend" class="form-select">
+        <label asp-for="WillAttend" class="form-label">Katılım Durumu</label>
+        <select asp-for="WillAttend" class="form-select">
+            <option value="">Seçiniz</option>
             <option value="true">Katılıyorum</option>
             <option value="false">Katılmıyorum</option>
         </select>
